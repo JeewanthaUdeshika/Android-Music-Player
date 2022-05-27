@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onPermissionDenied(PermissionDeniedResponse permissionDeniedResponse) {
-
+                        // If denied, keep asking the permission
+                        runTimePermission();
                     }
 
                     @Override
