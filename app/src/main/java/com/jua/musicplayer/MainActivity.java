@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
     // Dexter library is used to get permission
     public void runTimePermission(){
         // Getting permission dialog
-        Log.d("JUA123", "JUA");
         Dexter.withContext(this)
                 .withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
                 .withListener(new PermissionListener() {
@@ -71,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Method to find song from the storage
     public ArrayList<File> findSong(File file){
+        Log.d("JUA123", "JUA");
 
         ArrayList<File> songList = new ArrayList<File>();    // Array list to return with mp3 and wmv files
         File[] files = file.listFiles();                    // List all the files from given 'File' directory
